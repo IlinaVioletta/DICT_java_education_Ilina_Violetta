@@ -1,6 +1,5 @@
 package ChatBot;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ChatBot {
@@ -22,6 +21,24 @@ public class ChatBot {
         int number = num.nextInt();
         for (int i = 0; i<=number; i++){
             System.out.println(i + "!");
+        }
+        System.out.println("""
+                        Let's test your programming knowledge.
+                        What data type is used for integer values in Java?
+                        1.String
+                        2.int
+                        3.double
+                        4.boolean""");
+
+        while (true){
+            int answer = num.nextInt();
+            if (answer == 2){
+                System.out.println("Correct\n" +
+                        "Goodbye, have a nice day!");
+                break;
+            } else {
+                System.out.println("Wrong, try again");
+            }
         }
     }
 }
